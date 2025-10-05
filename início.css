@@ -1,0 +1,138 @@
+body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #23528F;
+      color: rgb(0, 0, 0);
+    }
+
+    header {
+      background-image: url('https://github.com/MiguelMascarini/Laele-PJI/blob/main/static/css/praia.jpg?raw=true');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    header img {
+      width: 140px;
+      height: 140px;
+      margin: 140px;
+
+    }
+
+    nav {
+      background-color: #23528F;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+
+    nav button {
+      background-color: #74A1C5;
+      color: rgb(0, 0, 0);
+      border: none;
+      padding: 15px 50px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: background 0.3s;
+    }
+
+    nav button:hover {
+      background-color: #6ea8e3;
+    }
+
+    main {
+      width: 60%;
+      margin: 30px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .section {
+      background-color: #74A1C5;
+      padding: 100px;
+        width: 950px;
+      height: 50px;
+      border-radius: 10px;
+      text-align: center;
+      
+    }
+
+    .section h2 {
+      margin: 0;
+      font-size: 35px;
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .info-box {
+      flex: 1;
+      background-color: #74A1C5;
+      border-radius: 10px;
+      padding: 100px;
+      text-align: center;
+      font-size: 25px
+    }
+
+    .photo-upload {
+      background-color: #74A1C5;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .photo-upload i {
+      font-size: 40px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .photo-upload p {
+      margin: 5px 0 0;
+    }
+
+    .ranking {
+      display: flex;
+      gap: 15px;
+    }
+
+    .ranking-box {
+      flex: 1;
+      background-color: #74A1C5;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: left;
+    }
+
+    .ranking-box h3 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    #divBusca{
+  background-color:#74A1C5;
+  
+  border-radius:15px;
+  width:300px;
+}
+
+#txtBusca{
+  float:left;
+  background-color:transparent;
+  padding-left:5px;
+  font-style:italic;
+  font-size:18px;
+  border:none;
+  height:32px;
+  width:260px;
+}
