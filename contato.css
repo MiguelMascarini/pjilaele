@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #23528F;
+    color: rgb(0, 0, 0);
+  }
+
+  header {
+    background-image: url('https://github.com/MiguelMascarini/Laele-PJI/blob/main/static/css/praia.jpg?raw=true');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  header img {
+    width: 140px;
+    height: 140px;
+    margin: 140px;
+
+  }
+
+  nav {
+    background-color: #23528F;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+  }
+
+  nav button {
+    background-color: #74A1C5;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 15px 50px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.3s;
+  }
+
+  nav button:hover {
+    background-color: #6ea8e3;
+  }
+
+  main {
+    width: 60%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+header {
+    background-image: url('https://github.com/MiguelMascarini/Laele-PJI/blob/main/static/css/praia.jpg?raw=true');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  header img {
+    width: 140px;
+    height: 140px;
+    margin: 140px;
+
+  }
+
+  nav {
+    background-color: #23528F;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+  }
+
+  nav button {
+    background-color: #74A1C5;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 15px 50px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.3s;
+  }
+
+  nav button:hover {
+    background-color: #6ea8e3;
+  }
+
+.header img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    background-color: #003b82;
+    padding: 20px;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+.content {
+    background-color: #004d99;
+    padding: 50px 0;
+}
+
+.form-box {
+    background-color: #4d4d4d;
+    border-radius: 10px;
+    padding: 40px;
+    width: 60%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    border: 2px solid #0066cc;
+}
+
+.form-title {
+    background-color: #f2f2f2;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.form-box button {
+    background-color: #66a3d2;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+.form-box button:hover {
+    background-color: #4d94c7;
+}
