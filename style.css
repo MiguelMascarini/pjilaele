@@ -6,17 +6,29 @@ body {
   color: #333;
 }
 
+
+
 header {
   position: relative;
   text-align: center;
-  padding: 70px;
-  background-color: #007BFF;
+  padding: 200px 0; /* aumenta o espaço vertical */
+  
+  /* adiciona a imagem de fundo */
+  background-image: url('praia.png'); /* caminho do seu arquivo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* remove o fundo azul */
+  background-color: transparent;
+
   animation: slide-down 1s ease-out;
 }
 
+
 header .logo {
   position: absolute;
-  top: 10px;
+  top: 250px;
   right: 10px;
   max-width: 100px;
 }
@@ -82,13 +94,22 @@ nav {
   margin: 20px;
 }
 
-.info-box {
+.info-box1 {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
+
+.info-box {
+  background-color: #ffffff;
+  padding: 75px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
 
 .info-box:hover {
   transform: translateY(-5px);
@@ -144,20 +165,88 @@ nav {
   transition: transform 0.3s;
 }
 
+/* Ajuste proporcional dos tamanhos com diferença na altura superior */
+.podium-item.first {
+  width: 150px; /* Maior para o 1º lugar */
+  height: 200px;
+  margin-top: 0; /* O 1º lugar está no topo */
+}
+
+.podium-item.second {
+  width: 130px; /* Médio para o 2º lugar */
+  height: 180px;
+  margin-top: 20px; /* O 2º lugar está um pouco mais baixo */
+}
+
+.podium-item.third {
+  width: 110px; /* Menor para o 3º lugar */
+  height: 160px;
+  margin-top: 40px; /* O 3º lugar está ainda mais baixo */
+}
+
+/* Mantém o efeito de hover */
 .podium-item:hover {
   transform: translateY(-5px);
 }
 
 .gold {
   background: linear-gradient(45deg, #ffd700, #b69205);
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.gold:hover {
+  transform: translateY(30px); /* Move o quadrado para baixo */
+}
+
+.gold:hover::after {
+  content: '🏅'; /* Emoji de medalha de ouro */
+  position: absolute;
+  top: -50px; /* Posiciona a medalha acima do quadrado */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px; /* Tamanho da medalha */
+  animation: medal-bounce 0.5s ease-out forwards;
 }
 
 .silver {
   background: linear-gradient(45deg, #c0c0c0, #d9d9d9);
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.silver:hover {
+  transform: translateY(30px); /* Move o quadrado para baixo */
+}
+
+.silver:hover::after {
+  content: '🥈'; /* Emoji de medalha de prata */
+  position: absolute;
+  top: -50px; /* Posiciona a medalha acima do quadrado */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px; /* Tamanho da medalha */
+  animation: medal-bounce 0.5s ease-out forwards;
 }
 
 .bronze {
   background: linear-gradient(45deg, #cd7f32, #d4a373);
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.bronze:hover {
+  transform: translateY(30px); /* Move o quadrado para baixo */
+}
+
+.bronze:hover::after {
+  content: '🥉'; /* Emoji de medalha de bronze */
+  position: absolute;
+  top: -50px; /* Posiciona a medalha acima do quadrado */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px; /* Tamanho da medalha */
+  animation: medal-bounce 0.5s ease-out forwards;
 }
 
 .rank-number {
@@ -191,4 +280,93 @@ nav {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+@keyframes medal-rise {
+  0% {
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-50%) scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animação de "salto" da medalha */
+@keyframes medal-bounce {
+  0% {
+    transform: translateX(-50%) translateY(10px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-50%) translateY(-5px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+.ranking-list {
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.ranking-list h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.ranking-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ranking-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ranking-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ranking-position {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0056b3;
+}
+
+.ranking-name {
+  font-size: 16px;
+  color: #333;
+  flex: 1;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.ranking-score {
+  font-size: 16px;
+  font-weight: bold;
+  color: #007BFF;
 }
