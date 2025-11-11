@@ -14,8 +14,8 @@ app.use(bodyParser.json());
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "m.valhiente@aluno.ifsp.edu.br@gmail.com", // seu gmail
-    pass: "SENHA_DE_APLICATIVO" // gere uma senha de app p/ Gmail na conta Google
+    user: "m.valhiente@aluno.ifsp.edu.br", // seu gmail
+    pass: "@Frangolina23" // gere uma senha de app p/ Gmail na conta Google
   }
 });
 
@@ -24,8 +24,8 @@ app.post("/enviar-contato", async (req, res) => {
 
   try {
     await transporter.sendMail({
-      from: `"Contato Site" <m.valhiente@aluno.ifsp.edu.br@gmail.com>`,
-      to: "m.valhiente@aluno.ifsp.edu.br@gmail.com",
+      from: `"Contato Site" <m.valhiente@aluno.ifsp.edu.br>`,
+      to: "mascarinibm@gmail.com",
       subject: "Nova mensagem de contato",
       html: `
         <h3>Nova mensagem recebida</h3>
