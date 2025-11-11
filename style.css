@@ -88,36 +88,39 @@ nav {
   margin: 20px 0;
 }
 
+/* Ajuste do espaçamento e tamanho do info-box */
 .info {
   display: flex;
   justify-content: space-around;
-  margin: 20px;
+  margin: 10px; /* Reduz a margem geral */
 }
 
-.info-box1 {
+.info-box1, .info-box {
   background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 30px; /* Aumenta o espaçamento interno */
+  border-radius: 15px; /* Bordas mais arredondadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra mais destacada */
   transition: transform 0.3s;
+  flex: 1; /* Faz com que os elementos cresçam proporcionalmente */
+  margin: 10px; /* Reduz a margem entre os elementos */
 }
 
-.info-box {
-  background-color: #ffffff;
-  padding: 75px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+.info-box1 p, .info-box p {
+  font-size: 1.5rem; /* Aumenta o tamanho do texto */
+  font-weight: bold;
+  color: #0056b3;
+  margin: 5px 0; /* Reduz o espaçamento entre os parágrafos */
 }
 
-
-.info-box:hover {
-  transform: translateY(-5px);
+.info-box:hover, .info-box1:hover {
+  transform: scale(1.05); /* Adiciona um leve efeito de zoom ao passar o mouse */
 }
 
 .photo-upload {
   text-align: center;
   margin: 20px;
+  flex: 1; /* Faz com que a seção de upload ocupe o espaço disponível */
+  max-width: 45%; /* Limita a largura máxima */
 }
 
 .upload-btn {
@@ -321,6 +324,8 @@ nav {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  flex: 1; /* Faz com que o ranking ocupe o espaço disponível */
+  max-width: 45%; /* Limita a largura máxima */
 }
 
 .ranking-list h3 {
@@ -351,6 +356,15 @@ nav {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.ranking-item.highlight {
+  background-color: #9fc8fd; /* Cor de fundo amarela para destaque */
+  color: #000; 
+  font-weight: bold; 
+  border: 2px solid #c3e8f5; 
+  border-radius: 5px; 
+  padding: 10px; 
+}
+
 .ranking-position {
   font-size: 18px;
   font-weight: bold;
@@ -369,4 +383,28 @@ nav {
   font-size: 16px;
   font-weight: bold;
   color: #007BFF;
+}
+
+.info-box {
+  background-color: #f4f4f9; 
+  border: 2px solid #e7fbff; 
+  border-radius: 10px; 
+  text-align: center; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  max-width: 300px; 
+}
+
+.info-box p {
+  font-size: 5rem; 
+  font-weight: bold; 
+  color: #0056b3; 
+  margin: 0;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  gap: 20px;
+  margin: 20px; 
 }
