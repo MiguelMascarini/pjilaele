@@ -6,22 +6,19 @@ const cors = require("cors");
 const app = express();
 const port = 3001;
 
-// Permitir requisições do frontend
 app.use(cors());
 app.use(bodyParser.json());
 
-// Configura o transporter do nodemailer (substitua pelo seu gmail e app password)
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: "m.valhiente@aluno.ifsp.edu.br", // seu gmail
-    pass: "@Frangolina23" // gere uma senha de app p/ Gmail na conta Google
+    pass: "SENHA_DE_APP_DO_GOOGLE" // senha de app (NUNCA sua senha normal)
   }
 });
 
 app.post("/enviar-contato", async (req, res) => {
   const { nome, email, mensagem } = req.body;
-
   try {
     await transporter.sendMail({
       from: `"Contato Site" <m.valhiente@aluno.ifsp.edu.br>`,
@@ -32,7 +29,7 @@ app.post("/enviar-contato", async (req, res) => {
         <p><b>Nome:</b> ${nome}</p>
         <p><b>Email:</b> ${email}</p>
         <p><b>Mensagem:</b><br>${mensagem}</p>
-      `
+      `,
     });
     res.status(200).json({ ok: true, msg: "E-mail enviado com sucesso!" });
   } catch (e) {
