@@ -1,55 +1,85 @@
 body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background-color: #23528F;
-      color: rgb(0, 0, 0);
-    }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
 
-    header {
-      background-image: url('https://github.com/MiguelMascarini/Laele-PJI/blob/main/static/css/praia.jpg?raw=true');
-      background-size: cover;
-      background-position: center;
-      height: 300px;
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-start;
-      position: relative;
-    }
 
-    header img {
-      width: 140px;
-      height: 140px;
-      margin: 140px;
 
-    }
+header {
+  position: relative;
+  text-align: center;
+  padding: 200px 0; /* aumenta o espaço vertical */
+  
+  /* adiciona a imagem de fundo */
+  background-image: url('praia.png'); /* caminho do seu arquivo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* remove o fundo azul */
+  background-color: transparent;
 
-    nav {
-      background-color: #1b5593;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 10px 0;
-    }
+  animation: slide-down 1s ease-out;
+}
 
-    nav button {
-      background-color: #74A1C5;
-      color: rgb(0, 0, 0);
-      border: none;
-      padding: 15px 50px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 15px;
-      transition: background 0.3s;
-    }
 
-    nav button:hover {
-      background-color: #6ea8e3;
-    }
+header .logo {
+  position: absolute;
+  top: 250px;
+  right: 10px;
+  max-width: 100px;
+}
 
-    main {
-      width: 60%;
-      margin: 30px auto;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #0056b3;
+  padding: 10px;
+}
+
+.nav-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+#divBusca {
+  display: flex;
+  align-items: center;
+}
+
+#txtBusca {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#btnBusca {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+#btnBusca:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
