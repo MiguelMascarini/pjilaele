@@ -20,3 +20,8 @@ transporter.sendMail({
   }
   console.log('Sent: ' + info.response);
 });
+
+catch (e) {
+  console.error(e); // isso mostra no terminal detalhes do erro
+  res.status(500).json({ ok: false, msg: "Erro ao enviar e-mail.", error: e.toString() });
+}
