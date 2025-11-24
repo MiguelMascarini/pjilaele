@@ -2,6 +2,7 @@
 main {
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 
 .quiosque-name h1{
@@ -20,6 +21,17 @@ main {
 .meio{
   display: flex;
   justify-content: row;
+}
+
+.nome-imagem{
+  margin-bottom: 100px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.uploaded-image{
+  width: 50%;
 }
 
 /* Estilo para o info (à direita) */
