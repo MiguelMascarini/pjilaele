@@ -1,0 +1,30 @@
+body {
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+background: #23528F;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.card {
+background: rgb(255, 255, 255);
+padding: 30px;
+border-radius: 20px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+text-align: center;
+width: 350px;
+}
+h2 { color: #000000; margin-bottom: 20px; }
+button {
+width: 100%;
+padding: 12px;
+margin-top: 10px;
+background: #008cff;
+color: rgb(0, 0, 0);
+border: none;
+border-radius: 10px;
+font-size: 16px;
+cursor: pointer
+}
